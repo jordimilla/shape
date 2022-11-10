@@ -6,6 +6,8 @@ import UIKit.UINavigationController
 final class ListBreedsViewModel {
     
     private let fetchBreedsUseCase: FetchBreedsUseCase
+    private let createBreedDBEntitiesUseCase: CreateBreedDBEntitiesUseCase
+    private let fetchBreedsFromStoredUseCase: FetchBreedsFromStoredUseCase
     private let breedPicturesFeature: SingleParamFeatureProvider<Breed>
     private let favoritesPicturesFeature: FeatureProvider
     private var cancellables = Set<AnyCancellable>()
@@ -13,10 +15,14 @@ final class ListBreedsViewModel {
     @Published private(set) var breeds: [Breed] = []
     
     init(fetchBreedsUseCase: FetchBreedsUseCase,
+         createBreedDBEntitiesUseCase: CreateBreedDBEntitiesUseCase,
+         fetchBreedsFromStoredUseCase: FetchBreedsFromStoredUseCase,
          breedPicturesFeature: @escaping SingleParamFeatureProvider<Breed>,
          favoritesPicturesFeature: @escaping FeatureProvider) {
         
         self.fetchBreedsUseCase = fetchBreedsUseCase
+        self.createBreedDBEntitiesUseCase = createBreedDBEntitiesUseCase
+        self.fetchBreedsFromStoredUseCase = fetchBreedsFromStoredUseCase
         self.breedPicturesFeature = breedPicturesFeature
         self.favoritesPicturesFeature = favoritesPicturesFeature
     }
@@ -46,6 +52,28 @@ extension ListBreedsViewModel {
                 }
             }, receiveValue: { [weak self] items in
                 self?.breeds = items
+                self?.createEntity(breeds: items)
+            })
+            .store(in: &cancellables)
+    }
+}
+
+// MARK: - CoreData
+extension ListBreedsViewModel {
+    func createEntity(breeds: [Breed]) {
+        createBreedDBEntitiesUseCase.execute(value: breeds)
+    }
+    
+    func fetchPostFromStored() {
+        fetchBreedsFromStoredUseCase.execute(value: ())
+            .sink(receiveCompletion: { completion in
+            }, receiveValue: { [weak self] items in
+                if items.count == 0 {
+                    self?.fetchBreeds()
+                } else {
+                    let breeds = BreedDB.mapBreeds(input: items)
+                    self?.breeds = breeds
+                }
             })
             .store(in: &cancellables)
     }

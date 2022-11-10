@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A66EC8A291D582600C03242 /* ShapePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9A66EC89291D582600C03242 /* ShapePackage */; };
 		9A66EC8D291D585E00C03242 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66EC8C291D585E00C03242 /* AppAssembly.swift */; };
+		9A66EC93291D78F000C03242 /* Shape.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A66EC91291D78EF00C03242 /* Shape.xcdatamodeld */; };
 		9AE0C305291D45800055DC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C304291D45800055DC28 /* AppDelegate.swift */; };
 		9AE0C307291D45800055DC28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C306291D45800055DC28 /* SceneDelegate.swift */; };
 		9AE0C30E291D45810055DC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE0C30D291D45810055DC28 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		9A66EC8C291D585E00C03242 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		9A66EC92291D78EF00C03242 /* Shape.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shape.xcdatamodel; sourceTree = "<group>"; };
 		9AE0C301291D45800055DC28 /* Shape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE0C304291D45800055DC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE0C306291D45800055DC28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9AE0C304291D45800055DC28 /* AppDelegate.swift */,
 				9AE0C306291D45800055DC28 /* SceneDelegate.swift */,
 				9AE0C30D291D45810055DC28 /* Assets.xcassets */,
+				9A66EC91291D78EF00C03242 /* Shape.xcdatamodeld */,
 				9AE0C30F291D45810055DC28 /* LaunchScreen.storyboard */,
 				9AE0C312291D45810055DC28 /* Info.plist */,
 			);
@@ -280,6 +283,7 @@
 				9A66EC8D291D585E00C03242 /* AppAssembly.swift in Sources */,
 				9AE0C305291D45800055DC28 /* AppDelegate.swift in Sources */,
 				9AE0C307291D45800055DC28 /* SceneDelegate.swift in Sources */,
+				9A66EC93291D78F000C03242 /* Shape.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +618,19 @@
 			productName = ShapePackage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9A66EC91291D78EF00C03242 /* Shape.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A66EC92291D78EF00C03242 /* Shape.xcdatamodel */,
+			);
+			currentVersion = 9A66EC92291D78EF00C03242 /* Shape.xcdatamodel */;
+			path = Shape.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9AE0C2F9291D45800055DC28 /* Project object */;
 }

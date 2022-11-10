@@ -33,7 +33,7 @@ class ListBreedsViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupBindings()
-        viewModel.fetchBreeds()
+        viewModel.fetchPostFromStored()
     }
 }
 
