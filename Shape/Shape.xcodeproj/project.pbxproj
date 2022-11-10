@@ -49,6 +49,7 @@
 		9AE0C321291D45810055DC28 /* ShapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE0C325291D45810055DC28 /* ShapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeUITests.swift; sourceTree = "<group>"; };
 		9AE0C327291D45810055DC28 /* ShapeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9AE0C334291D45D20055DC28 /* ShapePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ShapePackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		9AE0C2F8291D45800055DC28 = {
 			isa = PBXGroup;
 			children = (
+				9AE0C334291D45D20055DC28 /* ShapePackage */,
 				9AE0C303291D45800055DC28 /* Shape */,
 				9AE0C31A291D45810055DC28 /* ShapeTests */,
 				9AE0C324291D45810055DC28 /* ShapeUITests */,
