@@ -5,9 +5,15 @@ import UIKit
 public class ListBreedsAssembly {
     
     private let fetchBreedsUseCase: FetchBreedsUseCase
-
-    public init(fetchBreedsUseCase: FetchBreedsUseCase) {
+    private let breedPicturesFeature: SingleParamFeatureProvider<Breed>
+    private let favoritesPicturesFeature: SingleParamFeatureProvider<Breed>
+    
+    public init(fetchBreedsUseCase: FetchBreedsUseCase,
+                breedPicturesFeature: @escaping SingleParamFeatureProvider<Breed>,
+                favoritesPicturesFeature: @escaping SingleParamFeatureProvider<Breed>) {
         self.fetchBreedsUseCase = fetchBreedsUseCase
+        self.breedPicturesFeature = breedPicturesFeature
+        self.favoritesPicturesFeature = favoritesPicturesFeature
     }
     
     public func build() -> UIViewController {
@@ -17,6 +23,8 @@ public class ListBreedsAssembly {
 
 extension ListBreedsAssembly {
     private func makeViewModel() -> ListBreedsViewModel {
-        ListBreedsViewModel(fetchBreedsUseCase: fetchBreedsUseCase)
+        ListBreedsViewModel(fetchBreedsUseCase: fetchBreedsUseCase,
+                            breedPicturesFeature: breedPicturesFeature,
+                            favoritesPicturesFeature: favoritesPicturesFeature)
     }
 }

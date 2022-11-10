@@ -15,6 +15,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", .branch("5.1.x"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,7 +26,7 @@ let package = Package(
         .target(name: "Data", dependencies: ["Domain"]),
         .testTarget(name: "DataTest", dependencies: ["Data"]),
         
-        .target(name: "Presentation", dependencies: ["Domain"]),
+        .target(name: "Presentation", dependencies: ["Domain", "SDWebImage"]),
         .testTarget(name: "PresentationTest", dependencies: ["Presentation"])
     ]
 )

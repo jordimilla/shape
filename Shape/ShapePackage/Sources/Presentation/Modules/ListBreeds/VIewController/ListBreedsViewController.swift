@@ -58,6 +58,8 @@ extension ListBreedsViewController: UITableViewDataSource {
 
 extension ListBreedsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        guard let navigation = self.navigationController else { return }
+        let breed: Breed = breeds[indexPath.row]
+        viewModel.goToPictures(navigationController: navigation, post: breed)
     }
 }

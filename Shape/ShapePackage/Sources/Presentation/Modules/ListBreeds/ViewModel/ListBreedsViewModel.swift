@@ -1,16 +1,33 @@
 import Domain
 import Foundation
 import Combine
+import UIKit.UINavigationController
 
 final class ListBreedsViewModel {
     
     private let fetchBreedsUseCase: FetchBreedsUseCase
+    private let breedPicturesFeature: SingleParamFeatureProvider<Breed>
+    private let favoritesPicturesFeature: SingleParamFeatureProvider<Breed>
     private var cancellables = Set<AnyCancellable>()
     
     @Published private(set) var breeds: [Breed] = []
     
-    init(fetchBreedsUseCase: FetchBreedsUseCase) {
+    init(fetchBreedsUseCase: FetchBreedsUseCase,
+         breedPicturesFeature: @escaping SingleParamFeatureProvider<Breed>,
+         favoritesPicturesFeature: @escaping SingleParamFeatureProvider<Breed>) {
+        
         self.fetchBreedsUseCase = fetchBreedsUseCase
+        self.breedPicturesFeature = breedPicturesFeature
+        self.favoritesPicturesFeature = favoritesPicturesFeature
+    }
+    
+    func goToPictures(navigationController: UINavigationController, post: Breed) {
+        let viewController = breedPicturesFeature(navigationController, post)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func goToFavorites() {
+        
     }
 }
 
