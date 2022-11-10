@@ -15,7 +15,7 @@ public struct ServiceDataSource: ServiceRepository {
             .tryMap{ data, response -> [Breed] in
                 let jsonDecoder = JSONDecoder()
                 let response = try jsonDecoder.decode(Response<[String]>.self, from: data)
-                return BreedMapper.map(input: response.items)
+                return BreedMapper.map(input: response.message)
             }
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
@@ -30,7 +30,7 @@ public struct ServiceDataSource: ServiceRepository {
             .tryMap{ data, response -> [BreedImage] in
                 let jsonDecoder = JSONDecoder()
                 let response = try jsonDecoder.decode(Response<[String]>.self, from: data)
-                return BreedImagesMapper.map(input: response)
+                return BreedImagesMapper.map(input: response.message)
             }
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()

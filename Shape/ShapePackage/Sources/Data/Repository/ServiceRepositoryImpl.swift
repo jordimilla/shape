@@ -10,11 +10,11 @@ public struct ServiceRepositoryImpl: ServiceRepository {
         self.serviceDataSource = serviceDataSource
     }
     
-    func fetchBreeds() -> AnyPublisher<[Breed], Error> {
+    public func fetchBreeds() -> AnyPublisher<[Breed], Error> {
         serviceDataSource.fetchBreeds()
     }
     
-    func fetchBreedImagesBy(breed: String) -> AnyPublisher<[BreedImage], Error> {
+    public func fetchBreedImagesBy(breed: String) -> AnyPublisher<[BreedImage], Error> {
         serviceDataSource.fetchBreedImagesBy(breed: breed)
     }
 }

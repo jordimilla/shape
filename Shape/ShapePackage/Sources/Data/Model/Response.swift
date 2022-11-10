@@ -5,7 +5,7 @@ public struct Response<T: Codable>: Codable {
     public let message: T
     
     public init(message: T) {
-        self.message = items
+        self.message = message
     }
     
     private enum CodingKeys: String, CodingKey {
@@ -14,6 +14,6 @@ public struct Response<T: Codable>: Codable {
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.message = try container.decode(T.self, forKey: .items)
+        self.message = try container.decode(T.self, forKey: .message)
     }
 }

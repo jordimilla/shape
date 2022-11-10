@@ -13,7 +13,7 @@ public struct BreedMapper: Mapper {
 public struct BreedImagesMapper: Mapper {
     
     static public func map(input: [String]) -> [BreedImage] {
-        return input.map { countK -> Breed in
+        return input.map { countK -> BreedImage in
             BreedImage(imageUrl: countK)
         }
     }
