@@ -7,14 +7,14 @@ final class ListBreedsViewModel {
     
     private let fetchBreedsUseCase: FetchBreedsUseCase
     private let breedPicturesFeature: SingleParamFeatureProvider<Breed>
-    private let favoritesPicturesFeature: SingleParamFeatureProvider<Breed>
+    private let favoritesPicturesFeature: FeatureProvider
     private var cancellables = Set<AnyCancellable>()
     
     @Published private(set) var breeds: [Breed] = []
     
     init(fetchBreedsUseCase: FetchBreedsUseCase,
          breedPicturesFeature: @escaping SingleParamFeatureProvider<Breed>,
-         favoritesPicturesFeature: @escaping SingleParamFeatureProvider<Breed>) {
+         favoritesPicturesFeature: @escaping FeatureProvider) {
         
         self.fetchBreedsUseCase = fetchBreedsUseCase
         self.breedPicturesFeature = breedPicturesFeature
@@ -26,8 +26,9 @@ final class ListBreedsViewModel {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func goToFavorites() {
-        
+    func goToFavorites(navigationController: UINavigationController) {
+        let viewController = favoritesPicturesFeature(navigationController)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 

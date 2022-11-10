@@ -6,11 +6,11 @@ public class ListBreedsAssembly {
     
     private let fetchBreedsUseCase: FetchBreedsUseCase
     private let breedPicturesFeature: SingleParamFeatureProvider<Breed>
-    private let favoritesPicturesFeature: SingleParamFeatureProvider<Breed>
+    private let favoritesPicturesFeature: FeatureProvider
     
     public init(fetchBreedsUseCase: FetchBreedsUseCase,
                 breedPicturesFeature: @escaping SingleParamFeatureProvider<Breed>,
-                favoritesPicturesFeature: @escaping SingleParamFeatureProvider<Breed>) {
+                favoritesPicturesFeature: @escaping FeatureProvider) {
         self.fetchBreedsUseCase = fetchBreedsUseCase
         self.breedPicturesFeature = breedPicturesFeature
         self.favoritesPicturesFeature = favoritesPicturesFeature

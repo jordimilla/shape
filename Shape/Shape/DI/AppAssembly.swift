@@ -10,7 +10,7 @@ public class AppAssembly {
         
         return ListBreedsAssembly(fetchBreedsUseCase: fetchBreedsUseCase,
                                   breedPicturesFeature: breedPicturesFeature,
-                                  favoritesPicturesFeature: breedPicturesFeature).build()
+                                  favoritesPicturesFeature: favoritesFeature).build()
     }
     
     public static let breedPicturesFeature: SingleParamFeatureProvider<Breed>  = { navigationController, breed in
@@ -20,5 +20,10 @@ public class AppAssembly {
         return BreedPicturesAssembly(navigationController: navigationController,
                                      breed: breed,
                                      fetchBreedImagesUseCase: fetchBreedImagesUseCase).build()
+    }
+    
+    public static let favoritesFeature: FeatureProvider  = { navigationController in
+        
+        return FavoritesAssembly().build()
     }
 }
