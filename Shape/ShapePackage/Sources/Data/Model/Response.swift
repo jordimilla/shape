@@ -2,6 +2,7 @@ import Foundation
 
 public struct Response<T: Codable>: Codable {
     // MARK: - Properties
+    
     public let message: T
     
     public init(message: T) {
