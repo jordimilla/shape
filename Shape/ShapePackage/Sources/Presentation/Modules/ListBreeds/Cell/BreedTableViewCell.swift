@@ -17,6 +17,7 @@ public final class BreedTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(titleLabel)
+        backgroundColor = .black
         setupContraints()
     }
     

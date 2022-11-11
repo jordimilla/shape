@@ -30,7 +30,7 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        backgroundColor = .white
+        backgroundColor = .black
         addSubview(imageView)
         addSubview(favoriteButton)
         setupContraints()

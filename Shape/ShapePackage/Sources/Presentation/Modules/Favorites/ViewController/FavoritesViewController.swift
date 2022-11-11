@@ -32,6 +32,39 @@ class FavoritesViewController: UIViewController {
     }
 }
 
+// MARK: - Layout
+extension FavoritesViewController {
+    private func setupViews() {
+        view.backgroundColor = .black
+        title = "Favorites"
+
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 4, bottom: 4, right: 4)
+        layout.itemSize = CGSize(width: 120, height: 120)
+        
+        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView?.register(BreedPictureCollectionViewCell.self, forCellWithReuseIdentifier: BreedPictureCollectionViewCell.indentifier)
+        collectionView?.backgroundColor = .black
+        view.addSubview(collectionView ?? UICollectionView())
+        
+        collectionView?.dataSource = self
+    }
+}
+
+// MARK: - Binding
+extension FavoritesViewController {
+    private func setupBindings() {
+        viewModel.$breedImages
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] items in
+                self?.breedImages = items
+                self?.collectionView?.reloadData()
+            }
+            .store(in: &cancellables)
+    }
+}
+
+// MARK: - UICollectionViewDataSource
 extension FavoritesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return breedImages.count
@@ -49,10 +82,3 @@ extension FavoritesViewController: UICollectionViewDataSource {
         return cell
     }
 }
-
-extension FavoritesViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         print("User tapped on item \(indexPath.row)")
-      }
-}
-
