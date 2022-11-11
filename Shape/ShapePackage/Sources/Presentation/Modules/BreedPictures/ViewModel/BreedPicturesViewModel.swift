@@ -66,7 +66,7 @@ extension BreedPicturesViewModel {
                     self?.fetchBreedImages()
                 } else {
                     let breedImages = BreedImageDB.mapBreedImage(input: items)
-                    self?.breedImages = breedImages
+                    self?.breedImages = breedImages.sorted { $0.imageUrl < $1.imageUrl }
                 }
             })
             .store(in: &cancellables)

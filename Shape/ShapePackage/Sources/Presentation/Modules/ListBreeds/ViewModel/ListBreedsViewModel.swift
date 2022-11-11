@@ -72,7 +72,7 @@ extension ListBreedsViewModel {
                     self?.fetchBreeds()
                 } else {
                     let breeds = BreedDB.mapBreeds(input: items)
-                    self?.breeds = breeds
+                    self?.breeds = breeds.sorted { $0.name < $1.name }
                 }
             })
             .store(in: &cancellables)

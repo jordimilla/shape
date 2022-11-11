@@ -15,7 +15,6 @@ class ListBreedsViewController: UIViewController {
         return $0
     }(UITableView())
     
-    
     // MARK: - Inits
     
     public init(viewModel: ListBreedsViewModel) {

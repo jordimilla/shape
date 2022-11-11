@@ -6,16 +6,24 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
     
     public static let indentifier = "BreedPictureCollectionViewCell"
 
+    private lazy var titleLabel: UILabel = {
+        $0.font = .systemFont(ofSize: 15.0, weight: .regular)
+        $0.lineBreakMode = .byWordWrapping
+        $0.backgroundColor = .black
+        $0.textColor = .white
+        $0.numberOfLines = 0
+        return $0
+    }(UILabel())
+    
     private lazy var imageView: UIImageView = {
-        let imageView = UIImageView()
-        return imageView
-    }()
+        $0.contentMode = .scaleToFill
+        return $0
+    }(UIImageView())
     
     private lazy var favoriteButton: UIButton = {
-        let button = UIButton()
-        button.tintColor = .yellow
-        return button
-    }()
+        $0.tintColor = .yellow
+        return $0
+    }(UIButton())
     
     var hasFavorite: Bool?
     var valueFavoriteChanged:((Bool) -> Void)?
@@ -32,6 +40,7 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         backgroundColor = .black
         addSubview(imageView)
+        addSubview(titleLabel)
         addSubview(favoriteButton)
         setupContraints()
     }
@@ -41,6 +50,13 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
                           bottom: self.bottomAnchor,
                           right: self.rightAnchor)
         
+        titleLabel.anchor(top: self.imageView.topAnchor,
+                     left: self.imageView.leftAnchor,
+                     right: self.imageView.rightAnchor,
+                     topConstant: 4,
+                     leftConstant: 8,
+                     rightConstant: 8)
+        
         favoriteButton.anchor(bottom: self.imageView.bottomAnchor,
                               right: self.imageView.rightAnchor,
                               bottomConstant: 16,
@@ -48,10 +64,13 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setup(image: BreedImage) {
-        self.hasFavorite = image.hasFavorite
+    func setup(image: BreedImage, hiddenTitle: Bool? = true) {
+        hasFavorite = image.hasFavorite
+        titleLabel.text = image.breed?.capitalized
         imageView.sd_setImage(with: URL(string: image.imageUrl), placeholderImage: UIImage())
         setButtons(hasFavorite: self.hasFavorite ?? false)
+        guard let hiddenLabel = hiddenTitle else { return }
+        titleLabel.isHidden = hiddenLabel
     }
     
     func setButtons(hasFavorite: Bool) {
@@ -68,8 +87,8 @@ public final class BreedPictureCollectionViewCell: UICollectionViewCell {
      }
     
     @objc private func handleMarkAsFavorite() {
-        self.hasFavorite = !(self.hasFavorite ?? false)
-        setButtons(hasFavorite: self.hasFavorite ?? false)
-        valueFavoriteChanged?(self.hasFavorite ?? false)
+        hasFavorite = !(hasFavorite ?? false)
+        setButtons(hasFavorite: hasFavorite ?? false)
+        valueFavoriteChanged?(hasFavorite ?? false)
     }
 }
