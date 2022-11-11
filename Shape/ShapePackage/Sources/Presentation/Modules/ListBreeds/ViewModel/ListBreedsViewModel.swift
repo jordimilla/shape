@@ -64,7 +64,7 @@ extension ListBreedsViewModel {
         createBreedDBEntitiesUseCase.execute(value: breeds)
     }
     
-    func fetchPostFromStored() {
+    func fetchBreedsFromStored() {
         fetchBreedsFromStoredUseCase.execute(value: ())
             .sink(receiveCompletion: { completion in
             }, receiveValue: { [weak self] items in

@@ -28,7 +28,7 @@ class BreedPicturesViewController: UIViewController {
         super.viewDidLoad()
         setupBindings()
         setupViews()
-        viewModel.fetchBreedImagesBy()
+        viewModel.fetchBreedImagesFromStored()
     }
 }
 
@@ -42,7 +42,10 @@ extension BreedPicturesViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         let image: BreedImage = breedImages[indexPath.row]
-        cell.setup(imageUrl: image.imageUrl)
+        cell.setup(image: image)
+        cell.setCallback(callback: {[unowned self] (boolValue:Bool) in
+            viewModel.setFavoriteImage(image: image)
+        })
         return cell
     }
 }

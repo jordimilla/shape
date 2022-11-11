@@ -17,4 +17,12 @@ public struct BreedImagesMapper: Mapper {
             BreedImage(imageUrl: countK)
         }
     }
+    
+    static public func updateBreed(input: [BreedImage], breed: String) -> [BreedImage] {
+        return input.map { countK -> BreedImage in
+            BreedImage(imageUrl: countK.imageUrl,
+                       hasFavorite: countK.hasFavorite,
+                       breed: breed)
+        }
+    }
 }

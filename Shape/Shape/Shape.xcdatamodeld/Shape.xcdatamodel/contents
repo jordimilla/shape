@@ -3,11 +3,13 @@
     <entity name="BreedDB" representedClassName="BreedDB" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="BreedImageDB" representedClassName="BreedImageDB" syncable="YES" codeGenerationType="class">
+    <entity name="BreedImageDB" representedClassName="BreedImageDB" syncable="YES">
+        <attribute name="breed" optional="YES" attributeType="String"/>
+        <attribute name="hasFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="BreedDB" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="BreedImageDB" positionX="-54" positionY="9" width="128" height="44"/>
+        <element name="BreedImageDB" positionX="-54" positionY="9" width="128" height="74"/>
     </elements>
 </model>

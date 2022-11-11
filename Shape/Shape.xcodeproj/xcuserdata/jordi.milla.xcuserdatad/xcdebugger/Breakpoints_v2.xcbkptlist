@@ -7,32 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "66431D00-EA03-4A2A-AFEC-782092ECEFF4"
+            uuid = "98FD7B0B-8717-453C-AD2A-C672FF31AA02"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShapePackage/Sources/Presentation/Modules/ListBreeds/ViewModel/ListBreedsViewModel.swift"
+            filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "fetchPostFromStored()"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setFavoriteImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "644D95D7-3896-4547-8E77-0C407CDE80ED"
+            uuid = "63CC8C5F-1D0E-4AE6-84EB-5145D6E7BC50"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShapePackage/Sources/Presentation/Modules/ListBreeds/ViewModel/ListBreedsViewModel.swift"
+            filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "fetchPostFromStored()"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "updateImage(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C56711FA-EA24-44A4-8DB9-53EA555A4AEC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fetchBreedImagesFromStored()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5F2A3E2-72C6-404A-91FC-F39473DAF263"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapePackage/Sources/Data/Repository/CoreDataRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "fetchFavoritesFromStored()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3535B9A4-E974-40DD-B1DA-160E43541B8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapePackage/Sources/Presentation/Modules/Favorites/ViewModel/FavoritesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

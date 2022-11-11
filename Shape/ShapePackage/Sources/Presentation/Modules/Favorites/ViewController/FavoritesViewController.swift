@@ -7,14 +7,11 @@ class FavoritesViewController: UIViewController {
     
     // MARK: - Properties
     var viewModel: FavoritesViewModel
+    var breedImages: [BreedImage] = []
+    var collectionView: UICollectionView?
+    
     var cancellables: Set<AnyCancellable> = []
-    
-    let tableView: UITableView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        return $0
-    }(UITableView())
-    
-    
+
     // MARK: - Inits
     
     public init(viewModel: FavoritesViewModel) {
@@ -29,31 +26,33 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupConstraints()
         setupBindings()
+        setupViews()
+        viewModel.fetchBreedImagesFromStored()
     }
 }
 
-// MARK: - UITableViewDataSource
-
-extension FavoritesViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+extension FavoritesViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return breedImages.count
     }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BreedTableViewCell.indentifier, for: indexPath) as? BreedTableViewCell else {
-            return UITableViewCell()
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BreedPictureCollectionViewCell.indentifier, for: indexPath) as? BreedPictureCollectionViewCell else {
+            return UICollectionViewCell()
         }
+        let image: BreedImage = breedImages[indexPath.row]
+        cell.setup(image: image)
+        cell.setCallback(callback: {[unowned self] (boolValue:Bool) in
+            viewModel.setFavoriteImage(image: image)
+        })
         return cell
     }
 }
 
-// MARK: - UITableViewDelegate
-
-extension FavoritesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    }
+extension FavoritesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         print("User tapped on item \(indexPath.row)")
+      }
 }
+
