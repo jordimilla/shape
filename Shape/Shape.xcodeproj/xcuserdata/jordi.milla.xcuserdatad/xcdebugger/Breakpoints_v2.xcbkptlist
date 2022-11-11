@@ -14,8 +14,8 @@
             filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "setFavoriteImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "updateImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "ShapePackage/Sources/Presentation/Modules/BreedPictures/ViewModel/BreedPicturesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "fetchBreedImagesFromStored()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "ShapePackage/Sources/Presentation/Modules/Favorites/ViewModel/FavoritesViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "updateImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -129,6 +129,70 @@
             startingLineNumber = "148"
             endingLineNumber = "148"
             landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8522E881-53DE-47A8-940F-459B6712E9F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapePackage/Tests/PresentationTest/LisBreeds/ListBreedsViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "test_fetchBreedsUseCase()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8522E881-53DE-47A8-940F-459B6712E9F2 - 9067ce44ee9949b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Domain.Breed&gt;) -&gt; () in PresentationTest.ListBreedsViewModelTest.test_getBreeds() -&gt; ()"
+                  moduleName = "PresentationTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordi.milla/shape/Shape/ShapePackage/Tests/PresentationTest/LisBreeds/ListBreedsViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "8522E881-53DE-47A8-940F-459B6712E9F2 - f6e71e057fe501be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Domain.Breed&gt;) -&gt; () in PresentationTest.ListBreedsViewModelTest.test_fetchBreedsUseCase() -&gt; ()"
+                  moduleName = "PresentationTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jordi.milla/shape/Shape/ShapePackage/Tests/PresentationTest/LisBreeds/ListBreedsViewModelTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBC2F8DF-455D-4BC0-AF94-0F50E302622B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapeUITests/Steps/MainSteps.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "i_see_MainView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

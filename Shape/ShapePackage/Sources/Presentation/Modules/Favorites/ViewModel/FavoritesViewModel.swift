@@ -1,7 +1,6 @@
 import Domain
 import Foundation
 import Combine
-import Data
 
 final class FavoritesViewModel {
     

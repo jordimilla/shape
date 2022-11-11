@@ -1,7 +1,6 @@
 import Domain
 import Foundation
 import Combine
-import Data
 
 final class BreedPicturesViewModel {
     
@@ -44,11 +43,19 @@ extension BreedPicturesViewModel {
                     break
                 }
             }, receiveValue: { [weak self] items in
-                self?.breedImages = BreedImagesMapper.updateBreed(input: items, breed: self?.breed.name ?? "")
-                guard let breedImgs = self?.breedImages else { return }
+                guard let breedImgs = self?.updateBreed(input: items, breed: self?.breed.name ?? "") else { return }
+                self?.breedImages = breedImgs
                 self?.createEntity(breedImages: breedImgs)
             })
             .store(in: &cancellables)
+    }
+    
+    func updateBreed(input: [BreedImage], breed: String) -> [BreedImage] {
+        return input.map { countK -> BreedImage in
+            BreedImage(imageUrl: countK.imageUrl,
+                       hasFavorite: countK.hasFavorite,
+                       breed: breed)
+        }
     }
 }
 

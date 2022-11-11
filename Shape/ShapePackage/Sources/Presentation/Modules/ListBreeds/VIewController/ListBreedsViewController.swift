@@ -41,6 +41,7 @@ extension ListBreedsViewController {
     private func setupViews() {
         view.backgroundColor = .black
         title = "Breeds"
+        view.accessibilityIdentifier = "listBreedScreenIdentifier"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsMultipleSelectionDuringEditing = false

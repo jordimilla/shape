@@ -10,13 +10,14 @@
 		9A66EC8A291D582600C03242 /* ShapePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 9A66EC89291D582600C03242 /* ShapePackage */; };
 		9A66EC8D291D585E00C03242 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66EC8C291D585E00C03242 /* AppAssembly.swift */; };
 		9A66EC93291D78F000C03242 /* Shape.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A66EC91291D78EF00C03242 /* Shape.xcdatamodeld */; };
+		9A66EC95291E203900C03242 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A66EC94291E203900C03242 /* README.md */; };
+		9A66ECA4291E257600C03242 /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66ECA2291E254300C03242 /* ShapeTests.swift */; };
+		9A74B586291E287B00AEB617 /* ShapeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74B584291E287B00AEB617 /* ShapeUITestsLaunchTests.swift */; };
+		9A74B587291E287B00AEB617 /* ShapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74B585291E287B00AEB617 /* ShapeUITests.swift */; };
 		9AE0C305291D45800055DC28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C304291D45800055DC28 /* AppDelegate.swift */; };
 		9AE0C307291D45800055DC28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C306291D45800055DC28 /* SceneDelegate.swift */; };
 		9AE0C30E291D45810055DC28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE0C30D291D45810055DC28 /* Assets.xcassets */; };
 		9AE0C311291D45810055DC28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE0C30F291D45810055DC28 /* LaunchScreen.storyboard */; };
-		9AE0C31C291D45810055DC28 /* ShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C31B291D45810055DC28 /* ShapeTests.swift */; };
-		9AE0C326291D45810055DC28 /* ShapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C325291D45810055DC28 /* ShapeUITests.swift */; };
-		9AE0C328291D45810055DC28 /* ShapeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0C327291D45810055DC28 /* ShapeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,10 @@
 /* Begin PBXFileReference section */
 		9A66EC8C291D585E00C03242 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		9A66EC92291D78EF00C03242 /* Shape.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shape.xcdatamodel; sourceTree = "<group>"; };
+		9A66EC94291E203900C03242 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9A66ECA2291E254300C03242 /* ShapeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTests.swift; sourceTree = "<group>"; };
+		9A74B584291E287B00AEB617 /* ShapeUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A74B585291E287B00AEB617 /* ShapeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeUITests.swift; sourceTree = "<group>"; };
 		9AE0C301291D45800055DC28 /* Shape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE0C304291D45800055DC28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE0C306291D45800055DC28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,10 +51,7 @@
 		9AE0C310291D45810055DC28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AE0C312291D45810055DC28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE0C317291D45810055DC28 /* ShapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE0C31B291D45810055DC28 /* ShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTests.swift; sourceTree = "<group>"; };
 		9AE0C321291D45810055DC28 /* ShapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE0C325291D45810055DC28 /* ShapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeUITests.swift; sourceTree = "<group>"; };
-		9AE0C327291D45810055DC28 /* ShapeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9AE0C334291D45D20055DC28 /* ShapePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ShapePackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,12 +96,21 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		9A66ECA1291E254300C03242 /* ShapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A66ECA2291E254300C03242 /* ShapeTests.swift */,
+			);
+			path = ShapeTests;
+			sourceTree = "<group>";
+		};
 		9AE0C2F8291D45800055DC28 = {
 			isa = PBXGroup;
 			children = (
+				9A66EC94291E203900C03242 /* README.md */,
 				9AE0C334291D45D20055DC28 /* ShapePackage */,
 				9AE0C303291D45800055DC28 /* Shape */,
-				9AE0C31A291D45810055DC28 /* ShapeTests */,
+				9A66ECA1291E254300C03242 /* ShapeTests */,
 				9AE0C324291D45810055DC28 /* ShapeUITests */,
 				9AE0C302291D45800055DC28 /* Products */,
 				9A66EC88291D582600C03242 /* Frameworks */,
@@ -130,19 +141,11 @@
 			path = Shape;
 			sourceTree = "<group>";
 		};
-		9AE0C31A291D45810055DC28 /* ShapeTests */ = {
-			isa = PBXGroup;
-			children = (
-				9AE0C31B291D45810055DC28 /* ShapeTests.swift */,
-			);
-			path = ShapeTests;
-			sourceTree = "<group>";
-		};
 		9AE0C324291D45810055DC28 /* ShapeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9AE0C325291D45810055DC28 /* ShapeUITests.swift */,
-				9AE0C327291D45810055DC28 /* ShapeUITestsLaunchTests.swift */,
+				9A74B585291E287B00AEB617 /* ShapeUITests.swift */,
+				9A74B584291E287B00AEB617 /* ShapeUITestsLaunchTests.swift */,
 			);
 			path = ShapeUITests;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 					};
 					9AE0C320291D45810055DC28 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 9AE0C300291D45800055DC28;
 					};
 				};
@@ -254,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A66EC95291E203900C03242 /* README.md in Resources */,
 				9AE0C311291D45810055DC28 /* LaunchScreen.storyboard in Resources */,
 				9AE0C30E291D45810055DC28 /* Assets.xcassets in Resources */,
 			);
@@ -291,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE0C31C291D45810055DC28 /* ShapeTests.swift in Sources */,
+				9A66ECA4291E257600C03242 /* ShapeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE0C328291D45810055DC28 /* ShapeUITestsLaunchTests.swift in Sources */,
-				9AE0C326291D45810055DC28 /* ShapeUITests.swift in Sources */,
+				9A74B586291E287B00AEB617 /* ShapeUITestsLaunchTests.swift in Sources */,
+				9A74B587291E287B00AEB617 /* ShapeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,13 +546,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShapeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Shape;
@@ -558,9 +570,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShapeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
